@@ -9,6 +9,7 @@
 
 body {
   background-color: #f8f4f4;
+  display: grid;
 }
 
 /* HEADER */
@@ -17,16 +18,17 @@ header h3 {
   padding: 20px;
   font-family: "Sarpnach", sans-serif;
   font-size: 5rem;
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 /* LOGO*/
 .logo {
   text-align: center;
-  color: #000000;
+  color: rgb(255, 255, 255);
   padding: 20px;
   font-family: "Tektur";
   font-size: 2rem;
+  background-color: rgb(0, 0, 0);
 }
 
 a:link {
@@ -37,15 +39,10 @@ a:visited {
   text-decoration: none;
 }
 
-a:hover {
+/* a:hover {
   text-decoration: none;
-  color: #000000aa;
-}
-
-/* a:active {
-  text-decoration: none;
+  color: #ffffff;
 } */
-/* MAIN PAGE */
 
 main {
   display: grid;
@@ -81,9 +78,6 @@ main {
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-  /* body {
-    background-color: red;
-  } */
   main {
     grid-template-columns: 1fr;
   }
@@ -91,9 +85,6 @@ main {
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-  /* body {
-    background-color: rgb(255, 170, 0);
-  } */
   main {
     grid-template-columns: 1fr 1fr;
   }
@@ -101,9 +92,6 @@ main {
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-  /* body {
-    background-color: rgb(179, 255, 0);
-  } */
   main {
     grid-template-columns: 1fr 1fr 1fr;
   }
@@ -111,9 +99,6 @@ main {
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-  /* body {
-    background-color: rgb(0, 229, 255);
-  } */
   main {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
@@ -121,10 +106,30 @@ main {
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-  /* body {
-    background-color: rgb(25, 0, 255);
-  } */
   main {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   }
+}
+
+.top {
+  --offset: 50px;
+
+  position: sticky;
+  bottom: 20px;
+  margin-right: 10px;
+  place-self: end;
+  margin-top: calc(100vh + var(--offset));
+
+  /* visual styling */
+  text-decoration: none;
+  padding: 10px;
+  font-family: "Tektur";
+  color: rgb(255, 255, 255);
+  background: rgb(0, 0, 0);
+  border-radius: 5px;
+  white-space: nowrap;
+}
+
+p {
+  font-size: 25px;
 }
