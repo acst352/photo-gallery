@@ -29,3 +29,16 @@ async function getData() {
 }
 
 getData();
+
+// Assign the scroll event to the window.
+window.addEventListener("scroll", () => {
+  const gotopbtn = document.querySelector(".gotopbtn");
+
+  if (window.scrollY > 100) {
+    // Show the button when the user has scrolled a certain distance down.
+    gotopbtn.style.display = "block";
+  } else {
+    // Hide the button otherwise.
+    gotopbtn.style.display = "none";
+  }
+});
